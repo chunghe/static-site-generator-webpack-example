@@ -1,12 +1,12 @@
 
 
 
-var React = require('react')
-var Router = require('react-router')
-var Link = Router.Link
+import React from 'react';
+import Router, {Link} from 'react-router';
 
-var Header = React.createClass({
-  render: function () {
+
+class Header extends React.Component {
+  render() {
     return (
       <header>
         <Link to='/'>Index</Link>
@@ -14,6 +14,6 @@ var Header = React.createClass({
       </header>
     )
   }
-})
+}
 
-module.exports = Header
+export default Header;

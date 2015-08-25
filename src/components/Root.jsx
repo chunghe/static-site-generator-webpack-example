@@ -1,11 +1,11 @@
 
-var React = require('react')
-var Router = require('react-router')
-var RouteHandler = Router.RouteHandler
-var Header = require('./Header.jsx')
 
-var Root = React.createClass({
-  render: function () {
+import React from 'react';
+import Router, {RouteHandler} from 'react-router';
+import Header from './Header';
+
+class Root extends React.Component {
+  render() {
     var initialProps = {
       __html: safeStringify(this.props)
     }
@@ -27,10 +27,11 @@ var Root = React.createClass({
       </html>
     )
   }
-})
+}
+
 
 function safeStringify(obj) {
   return JSON.stringify(obj).replace(/<\/script/g, '<\\/script').replace(/<!--/g, '<\\!--')
 }
 
-module.exports = Root
+export default Root;

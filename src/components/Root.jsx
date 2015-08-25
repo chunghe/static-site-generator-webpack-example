@@ -3,6 +3,7 @@
 import React from 'react';
 import Router, {RouteHandler} from 'react-router';
 import Header from './Header';
+import {safeStringify} from '../util';
 
 class Root extends React.Component {
   render() {
@@ -29,9 +30,5 @@ class Root extends React.Component {
   }
 }
 
-
-function safeStringify(obj) {
-  return JSON.stringify(obj).replace(/<\/script/g, '<\\/script').replace(/<!--/g, '<\\!--')
-}
 
 export default Root;

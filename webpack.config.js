@@ -20,5 +20,9 @@ module.exports = {
 
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
-  ]
+  ],
+
+  resolve: {
+      extensions: ['', '.js', '.jsx']
+  }
 }
